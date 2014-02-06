@@ -12,40 +12,41 @@ while True:
             print "Please enter at least two numbers to add. For example:   + 1 2"
         else:
             tokens.pop(0)
-            answer = int(tokens.pop(0))
-            for i in tokens:
-                answer += int(i)
-            print answer
+            tokensint = []
+            for i in range(len(tokens)):
+                tokensint.append(int(tokens[i]))
+            print add(*tokensint)
+
 
     elif tokens[0] == "-":
         if len(tokens) < 3:
             print "Please enter at least two numbers to subtract. For example:   - 3 1"
         else:
             tokens.pop(0)
-            answer = int(tokens.pop(0))
-            for i in tokens:
-                answer -= int(i)
-            print answer
+            tokensint = []
+            for i in range(len(tokens)):
+                tokensint.append(int(tokens[i]))
+            print subtract(*tokensint)
 
     elif tokens[0] == "*":
         if len(tokens) < 3:
             print "Please enter at least two numbers to multiply. For example:   * 4 2"
         else:
             tokens.pop(0)
-            answer = int(tokens.pop(0))
-            for i in tokens:
-                answer *= int(i)
-            print answer
+            tokensint = []
+            for i in range(len(tokens)):
+                tokensint.append(int(tokens[i]))
+            print multiply(*tokensint)
 
     elif tokens[0] == "/":
         if len(tokens) < 3:
             print "Please enter at least two numbers to divide. For example:   / 4 2"
         else:
             tokens.pop(0)
-            answer = float(tokens.pop(0))
-            for i in tokens:
-                answer /= int(i)
-            print answer
+            tokensint = []
+            for i in range(len(tokens)):
+                tokensint.append(float(tokens[i]))
+            print divide(*tokensint)
 
     elif tokens[0] == "square":
         if len(tokens) != 2:
